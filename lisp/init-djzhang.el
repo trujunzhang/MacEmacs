@@ -10,7 +10,7 @@
               (width . 160)
               (height . 40)
               (background-color . "honeydew")
-              (left . 350)
+              (left . 450)
               (top . 400)))
 
 (provide 'init-djzhang)
