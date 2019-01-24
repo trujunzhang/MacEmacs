@@ -138,19 +138,19 @@
   ;; (require-init 'init-markdown)
   ;; (require-init 'init-erlang)
   (require-init 'init-javascript)
-  (require-init 'init-org)
+  ;; (require-init 'init-org)
   (require-init 'init-css)
   ;; (require-init 'init-python-mode)
   ;; (require-init 'init-haskell)
   ;; (require-init 'init-ruby-mode)
-  (require-init 'init-lisp)
+  ;; (require-init 'init-lisp)
   ;; (require-init 'init-elisp)
   (require-init 'init-yasnippet)
   ;; Use bookmark instead
   ;; (require-init 'init-cc-mode)
   ;; (require-init 'init-gud)
   (require-init 'init-linum-mode)
-  (require-init 'init-git) ;; git-gutter should be enabled after `display-line-numbers-mode' turned on
+  ;; (require-init 'init-git) ;; git-gutter should be enabled after `display-line-numbers-mode' turned on
   ;; (require-init 'init-gist)
   ;; (require-init 'init-gtags)
   ;; init-evil dependent on init-clipboard
@@ -159,15 +159,15 @@
   (require-init 'init-evil)
   (require-init 'init-multiple-cursors)
   (require-init 'init-sh)
-  (require-init 'init-ctags)
-  (require-init 'init-bbdb)
-  (require-init 'init-gnus)
+  ;; (require-init 'init-ctags)
+  ;; (require-init 'init-bbdb)
+  ;; (require-init 'init-gnus)
   ;; (require-init 'init-lua-mode)
   (require-init 'init-workgroups2)
   (require-init 'init-term-mode)
   (require-init 'init-web-mode)
   (require-init 'init-company)
-  (require-init 'init-chinese) ;; cannot be idle-required
+  ;; (require-init 'init-chinese) ;; cannot be idle-required
   ;; need statistics of keyfreq asap
   (require-init 'init-keyfreq)
   ;; (require-init 'init-httpd)
@@ -175,6 +175,7 @@
   ;; My trujunzhang's emacs.
   ;; (require-init 'init-evil-mode)
   (require-init 'init-typescript)
+  (require-init 'init-helm-projectile)
 
   ;; projectile costs 7% startup time
 

@@ -2,7 +2,7 @@
     (interactive)
     (save-some-buffers t))
   
-  (add-hook 'focus-out-hook 'save-all)
+;;  (add-hook 'focus-out-hook 'save-all)
 
  (setq default-frame-alist
             '(
@@ -10,7 +10,7 @@
               (width . 160)
               (height . 40)
               (background-color . "honeydew")
-              (left . 50)
-              (top . 50)))
+              (left . 350)
+              (top . 400)))
 
 (provide 'init-djzhang)
