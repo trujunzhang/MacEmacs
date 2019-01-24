@@ -28,3 +28,6 @@
 
 (depends-on "goto-chg")
 (depends-on "undo-tree")
+(depends-on "helm")
+(depends-on "projectile")
+(depends-on "tide")

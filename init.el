@@ -10,6 +10,7 @@
 ;; ~/Library/Preferences/Aquamacs Emacs/Preferences
 ;; _____________________________________________________________________________
 
+(x-focus-frame nil)
 
 (require 'package)
 
@@ -18,12 +19,21 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (setq package-enable-at-startup nil)
+
+
 (package-initialize)
 
 ;; f you are using Cask for your Emacs configuration, add this to your ~/.emacs.d/init.el file:
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -99,6 +109,9 @@
   (require-init 'init-compat)
   (require-init 'init-utils)
 
+
+  (require-init 'init-djzhang)
+
   ;; Windows configuration, assuming that cygwin is installed at "c:/cygwin"
   ;; (condition-case nil
   ;;     (when *win64*
@@ -122,24 +135,24 @@
   (require-init 'init-ivy)
   (require-init 'init-hippie-expand)
   (require-init 'init-windows)
-  (require-init 'init-markdown)
+  ;; (require-init 'init-markdown)
   ;; (require-init 'init-erlang)
   (require-init 'init-javascript)
   (require-init 'init-org)
   (require-init 'init-css)
   ;; (require-init 'init-python-mode)
-  (require-init 'init-haskell)
+  ;; (require-init 'init-haskell)
   ;; (require-init 'init-ruby-mode)
   (require-init 'init-lisp)
-  (require-init 'init-elisp)
+  ;; (require-init 'init-elisp)
   (require-init 'init-yasnippet)
   ;; Use bookmark instead
   ;; (require-init 'init-cc-mode)
-  (require-init 'init-gud)
+  ;; (require-init 'init-gud)
   (require-init 'init-linum-mode)
   (require-init 'init-git) ;; git-gutter should be enabled after `display-line-numbers-mode' turned on
   ;; (require-init 'init-gist)
-  (require-init 'init-gtags)
+  ;; (require-init 'init-gtags)
   ;; init-evil dependent on init-clipboard
   (require-init 'init-clipboard)
   ;; use evil mode (vi key binding)
@@ -157,11 +170,11 @@
   (require-init 'init-chinese) ;; cannot be idle-required
   ;; need statistics of keyfreq asap
   (require-init 'init-keyfreq)
-  (require-init 'init-httpd)
+  ;; (require-init 'init-httpd)
 
   ;; My trujunzhang's emacs.
-  (require-init 'init-evil-mode)
-
+  ;; (require-init 'init-evil-mode)
+  (require-init 'init-typescript)
 
   ;; projectile costs 7% startup time
 
