@@ -423,9 +423,14 @@ If the character before and after CH is space or tab, CH is NOT slash"
 (local-require 'general)
 (general-evil-setup t)
 
+;; (setq my/leader "SPC")
+(setq my/leader ",")
+
 ;; {{ use `,` as leader key
 ;; (nvmap :prefix ","
-(nvmap :prefix ","
+(nvmap 
+;;     :prefix "SPC"
+       :prefix my/leader
        "=" 'increase-default-font-height ; GUI emacs only
        "-" 'decrease-default-font-height ; GUI emacs only
        "bf" 'beginning-of-defun
