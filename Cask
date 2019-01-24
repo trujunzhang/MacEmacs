@@ -30,4 +30,7 @@
 (depends-on "undo-tree")
 (depends-on "helm")
 (depends-on "projectile")
+(depends-on "helm-projectile")
 (depends-on "tide")
+
+(depends-on "general")

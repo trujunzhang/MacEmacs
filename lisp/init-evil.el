@@ -420,7 +420,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
 ;; My frequently used commands are listed here
 ;; For example, for line like `"ef" 'end-of-defun`
 ;;   You can either press `,ef` or `M-x end-of-defun` to execute it
-(local-require 'general)
+(require 'general)
 (general-evil-setup t)
 
 ;; (setq my/leader "SPC")
