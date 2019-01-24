@@ -63,3 +63,4 @@ network-security.data
 .dir-locals.el
 
 localelpa/
+.cask/

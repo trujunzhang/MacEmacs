@@ -20,6 +20,10 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+;; f you are using Cask for your Emacs configuration, add this to your ~/.emacs.d/init.el file:
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -123,7 +127,7 @@
   (require-init 'init-javascript)
   (require-init 'init-org)
   (require-init 'init-css)
-  (require-init 'init-python-mode)
+  ;; (require-init 'init-python-mode)
   (require-init 'init-haskell)
   ;; (require-init 'init-ruby-mode)
   (require-init 'init-lisp)
@@ -154,6 +158,10 @@
   ;; need statistics of keyfreq asap
   (require-init 'init-keyfreq)
   (require-init 'init-httpd)
+
+  ;; My trujunzhang's emacs.
+  (require-init 'init-evil-mode)
+
 
   ;; projectile costs 7% startup time
 
